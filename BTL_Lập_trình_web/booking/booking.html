@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="boolking.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,500;0,700;0,800;1,300;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- header -->
+     <header>
+        <a href="#" class="logo">Food<span>Fun</span></a>
+        <ul class="navbar">
+            <li><a href="/trang chủ/trangchu.html">Home</a></li>
+            <li><a href="/thông tin/thongtin.html">About</a></li>
+            <li><a href="/Menu/menu.html">Menu</a></li>
+            <li><a href="#booking">Booking</a></li>
+        </ul>
+        <div class="h-icons">
+            <a href="#"><i class='bx bx-search'></i></a>
+            <a href="#"><i class='bx bx-cart' ></i></a>
+            <div class="bx bx-menu" id="menu" onclick="show_nav_mobie()"></div>
+        </div>
+
+        <!-- nav mobie -->
+        <ul class="navbar mobie" id="nav_mobie">
+            <i style="font-size: 30px; cursor: pointer; margin-bottom: 15px;margin-left: 20px;" class='bx bx-window-close' onclick="close_nav()"></i>
+            <li><a href="#home">Home</a></li>
+            <li><a href="/thông tin/thongtin.html">About</a></li>
+            <li><a href="/Menu/menu.html">Menu</a></li>
+            <li><a href="/booking/booking.html">Booking</a></li>
+        </ul>
+    </header>
+
+    <!-- css section  -->
+    <section class="home">
+        <!-- tieu de -->
+        <div class="title_text">
+            <h1>BOOKING ONLINE</h1>
+        </div>
+
+        <!-- container -->
+        <div class="container">
+            <div class="img-container">
+                <img src="/booking/img_booking/img_booking.jpg" alt="">
+            </div>
+
+            <div class="book-container">
+                <div class="item">
+                    <i class='bx bxs-user'></i>
+                    <input type="text" name="" id="textFullname" placeholder="Fullname...">
+                </div>
+
+                <div class="item">
+                    <i class='bx bxs-phone'></i>
+                    <input type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                    required name="" id="phone" placeholder="Phone...">
+                </div>
+
+
+                <div class="item">
+                    <i class='bx bx-calendar'></i>
+                    <input type="date" name="time_day" id="day" min="" placeholder="Caledar...">
+                </div>
+
+                <div class="item">
+                    <i class='bx bx-time-five'></i>
+                    <select name="" id="time">
+                        <option value="1">17:30</option>
+                        <option value="2">18:00</option>
+                        <option value="3">18:30</option>
+                        <option value="4">19:00</option>
+                        <option value="5">19:30</option>   
+                        <option value="6">20:00</option>
+                        <option value="7">20:30</option>
+                        <option value="8">21:00</option>
+                        <option value="9">21:30</option>
+
+                    </select>
+                </div>
+<!-- 
+                <div class="item">
+                    <i class='bx bxs-location-plus'></i>
+                    <input type="text" name="" id="location" placeholder="Locition...">
+                </div> -->
+
+                <div class="item">
+                    <i class='bx bxs-edit-alt' ></i>
+                    <input type="text" name="" id="Note" placeholder="Note...">
+                </div>
+
+                <div class="btn">
+                    <input id="booking" onclick="booking()" type="submit" value="booking"> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th  >Fullname</th>
+                    <th>Phone</th>
+                    <th>Datetime</th>
+                    <th>Hous</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>ha van canh</td>
+                    <td>0339972579</td>
+                    <td>21/10/2023</td>
+                    <td>21:30</td>
+                    <td>Decor hoa</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- contact section -->
+    <section class="contact">
+        <div class="main-contact">
+            <div class="contact-content">
+                <h4>Services</h4>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+            </div>
+
+            <div class="contact-content">
+                <h4>Parner</h4>
+                <li><a href="#">Food panda</a></li>
+                <li><a href="#">Foodie</a></li>
+                <li><a href="#">Food Fun</a></li>
+                <li><a href="#">Fresh Food</a></li>
+            </div>
+
+            <div class="contact-content">
+                <h4>Contact</h4>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Press center</a></li>
+                <li><a href="#">Carees</a></li>
+                <li><a href="#">Fag</a></li>
+            </div>
+
+            <div class="contact-content">
+                <h4>Follw US</h4>
+                <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+                <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+                <li><a href="#"><i class='bx bxl-telegram' ></i></a></li>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // var dvButton = document.getElementById("booking").parentElement;
+        // var dv_container = dvButton.parentElement;
+        function booking(){
+            var fullname = document.getElementById('textFullname').value;
+            var phone = document.getElementById('phone').value;
+            var date = document.getElementById('day').value;
+            var daynow = new Date();
+            var day = new Date(date);
+            var select = document.getElementById('time');
+            var time;
+            for (var i = 0; i < select.length; i++){
+                    if (select[i].selected){
+                        time = select[i].text;
+                    }
+                 }
+            var note = document.getElementById('Note').value;
+            if(fullname == "")
+            {
+                alert("xin vui long nhap ten");
+            }
+            else if(phone== "")
+            {
+                alert("xin vui long nhap phone");
+            }
+            else if(day <= daynow)
+            {
+                alert("xin vui long nhap lại ngay dat ban");
+            }else
+            {
+                alert("Dat ban thanh cong");    
+                add(fullname,phone,date,time,note);
+            }
+        }
+        function add(fullname,phone,date,time,note){
+            var tr = document.createElement('tr');
+            var temp = '<td>'+fullname+'</td><td>'+phone+'</td><td>'+date+'</td><td>'+time+'</td><td>'+note+'</td>'
+            tr.innerHTML = temp;
+            var tbody = document.querySelector('tbody');
+            tbody.append(tr);
+        }
+
+
+        function show_nav_mobie(){
+            document.getElementById("nav_mobie").style.display = 'block';
+        }
+
+        function close_nav(){
+            document.getElementById("nav_mobie").style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
